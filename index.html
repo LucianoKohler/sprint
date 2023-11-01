@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Barjstas - Reserva</title>
+</head>
+<body>
+  
+    <h1>Reserva de Sala</h1>
+
+    <form onsubmit="Reservar(); event.preventDefault()">
+      <label for="sala">Qual sala pretende reservar?:</label>
+      <input type="text" id="sala">
+      <br>
+      <br>
+      <label for="horario">Qual horário?:</label>
+      <input type="text" id="horario">
+      <br>
+      <input type="submit">
+    </form>
+
+    <h1>Reservas Atuais</h1>
+
+    <ul id="salas">
+
+    </ul>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
