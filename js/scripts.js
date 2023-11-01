@@ -1,5 +1,5 @@
 let hOcupados = [
-// HORARIO   'SALA
+  // HORARIO   'SALA
   ["08:30", "201"],
   ["16:15", "202"],
   ["22:15", "203"],
@@ -17,7 +17,7 @@ function Reservar() {
       break;
     }
   }
-  
+
   // Verifica se o for achou algo igual
   if (isAvailable == true) {
     window.alert("Horário Disponível. Cadastro feito com sucesso!");
@@ -27,8 +27,6 @@ function Reservar() {
   }
   atualizaLista();
 }
-
-
 
 function atualizaLista() {
   document.querySelector("#salas").innerHTML = "";

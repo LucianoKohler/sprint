@@ -1,6 +1,12 @@
 h1 {
   border-bottom-style: inset;
 }
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
 pre {
   font-size: 1.2em;
 }
@@ -16,13 +22,3 @@ span {
   color: blue;
 }
 
-/* Login */
-
-body {
-  font-family: Arial, sans-serif;
-}
-.container {
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-}
