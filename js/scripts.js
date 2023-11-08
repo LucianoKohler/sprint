@@ -9,7 +9,12 @@ function Reservar() {
   let sEscolhida = document.getElementById("sala").value;
   let hEscolhido = document.getElementById("horario").value;
   let isAvailable = true;
+  let check = document.getElementById("integrar").value;
 
+if(sEscolhida > 203 || sEscolhida < 201){
+  window.alert("Sala não existe, apenas as salas 201, 202 e 203 estão disponíveis");
+  isAvailable = false;
+}
   // Loop para verificar disponibilidade de sala e horário
   for (let i = 0; i < hOcupados.length; i++) {
     if (hOcupados[i][0] == hEscolhido && hOcupados[i][1] == sEscolhida) {
@@ -19,8 +24,8 @@ function Reservar() {
   }
 
   // Verifica se o for achou algo igual
-  if (isAvailable == true) {
-    window.alert("Horário Disponível. Cadastro feito com sucesso!");
+  if (isAvailable == true && check == 'on') {
+    window.alert("Horário Disponível, reserva Concluída e Integrada ao seu calendário!");
     hOcupados.push([hEscolhido, sEscolhida]);
   } else {
     window.alert("Horário Indisponível. Tente outro horário.");
@@ -41,3 +46,6 @@ function atualizaLista() {
 
 // Inicializar a lista no HTML;
 atualizaLista();
+
+///////////////////////
+

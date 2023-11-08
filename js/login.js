@@ -34,10 +34,10 @@ function ValidaLogin() {
 
   if (username == admUser.userName && password == admUser.password) {
     alert("Login efetuado com sucesso, olá senhor adm!");
-    window.location.href = "reserva.html";
+    window.location.href = "reserva.html?acctype=adm";
 } else if (username == user.userName && password == user.password) {
     alert("Login efetuado com sucesso, olá senhor usuário!");
-    window.location.href = "reserva.html";
+    window.location.href = "reserva.html?acctype=user";
   } else {
     alert("Login ou senha incorretos, tente novamente!");
   }

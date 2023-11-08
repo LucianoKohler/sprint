@@ -10,13 +10,24 @@
     <h1>Reserva de Sala</h1>
 
     <form onsubmit="Reservar(); event.preventDefault()">
-      <div class="flex">
+      <div class="reserva-div">
         <label for="sala">Qual sala pretende reservar?</label>
-        <input type="text" id="sala" placeholder="N° da Sala" />
-        <br>
+        <br />
+        <input type="number" id="sala" placeholder="N° da Sala" required />
+        <br />
         <label for="horario">Qual horário?</label>
-        <input type="text" id="horario" placeholder="00:00" />
-        <input type="submit" value="Validar" />
+        <br />
+        <input type="time" id="horario" placeholder="00:00" required />
+        <br /><br />
+        <input type="checkbox" name="" id="integrar" />
+        <label for="integrar"> Integrar com seu calendário? </label>
+        <br /><br />
+        <input
+          type="submit"
+          value="Validar"
+          class="btnOpenModal"
+          onclick="openModal()"
+        />
       </div>
     </form>
 
@@ -24,6 +35,11 @@
 
     <ul id="salas"></ul>
 
+    <div id="adm" style="display: none">
+      <h1>Área do administrador</h1>
+      <button onclick="gerarRelatorio()">Gerar Relatório</button>
+    </div>
+    <script src="js/adm.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
