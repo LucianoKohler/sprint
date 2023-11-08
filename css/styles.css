@@ -1,12 +1,15 @@
 h1 {
   border-bottom-style: inset;
 }
-.flex {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
 
+@media (max-width: 667px) {
+  .reserva-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
 pre {
   font-size: 1.2em;
 }
@@ -21,4 +24,3 @@ span {
 .fonteAzul {
   color: blue;
 }
-

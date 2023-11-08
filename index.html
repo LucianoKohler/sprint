@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" lang="pt-br" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>Barjstas - Reserva</title>
-  </head>
-  <body>
-    <h1>Reserva de Sala</h1>
+<head>
+    <title>Barjstas - login</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
 
-    <form onsubmit="Reservar(); event.preventDefault()">
-      <div class="flex">
-        <label for="sala">Qual sala pretende reservar?</label>
-        <input type="text" id="sala" placeholder="N° da Sala" />
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+          <h1>
+            BAR<span style="color: rgb(245, 245, 57);">JS</span>TAS
+          </h1>
+        </div>
         <br>
-        <label for="horario">Qual horário?</label>
-        <input type="text" id="horario" placeholder="00:00" />
-        <input type="submit" value="Validar" />
-      </div>
-    </form>
-
-    <h1>Reservas Atuais</h1>
-
-    <ul id="salas"></ul>
+        <br>
+        <h1>Login</h1>
+        <form id="login-form" onsubmit="ValidaLogin(); event.preventDefault()">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required><br><br>
+            <input type="submit" value="Entrar">
+        </form>
+        <p id="login-status"></p>
+    </div>
 
     <script src="js/login.js"></script>
-  </body>
+</body>
 </html>
